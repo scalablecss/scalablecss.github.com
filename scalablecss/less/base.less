@@ -53,7 +53,7 @@ ADD PLUGINS & HELPERS
 	This will not be outputted in compiled stylesheet "as is"
 \*-------------------------------------------------------------------*/
 // Variables
-@import 'pool/variables/variables.less'; 	// Custom colors, font-sizes, etc.
+@import 'app/variables/variables.less'; 	// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
 @import 'pool/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
@@ -69,11 +69,11 @@ ADD PLUGINS & HELPERS
 \*-------------------------------------------------------------------*/
 // Main styling
 @import 'pool/styles/normalize/normalize.css';  // Normalize browser CSS default styles
-@import 'pool/styles/typography.less';    			// Typography styles
-@import 'pool/styles/styles.less';        			// Elements-specific styles
+@import 'app/styles/typography.less';    			// Typography styles
+@import 'app/styles/styles.less';        			// Elements-specific styles
 
 // Screen Layout
-@import 'pool/layouts/320up.less'; 				// For responsive design, use layout suited to small-screen devices
+@import 'app/layouts/320up.less'; 				// For responsive design, use layout suited to small-screen devices
 .320up();                         				// For modern browsers we will add media queries in a separate file
 												// For old IE we will overwrite this layout with another one
 												// For non-responsive design, just load your only layout here
