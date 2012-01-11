@@ -1,5 +1,5 @@
 /*
- * pool/layouts/320up.less
+ * layouts/320up.less
  * ======================
  * Layout mixin for mobile devices
  * ----------------------------------------------------------------- */
@@ -9,7 +9,6 @@
 	body {
 		font-size: 14px;
 		margin: 0 auto;
-		text-align: center;
 	}
 
 	#header,
@@ -20,6 +19,19 @@
 	.one-third,
 	.two-third,
 	.one-quarter { width: 100%; .clearfix(); }
+
+	#header,
+	#footer {
+		text-align: center;
+	}
+
+	#subheader ul li,
+	#main {
+		padding: 0 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
 
     .debugmessage("media query (320>) fired", orange);
         

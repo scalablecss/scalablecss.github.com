@@ -1,5 +1,5 @@
 /*
- * pool/layouts/768up.less
+ * layouts/768up.less
  * ======================
  * Layout mixin for tablets
  * ----------------------------------------------------------------- */
@@ -8,29 +8,13 @@
 
  	body {
 	 	font-size: 18px;
-	 	text-align: left;
 	}
 
- 	.one-full {
-		.width(24, 100%);
-	}
+ 	.one-full { .width(24, 100%); }
 	.one-half { .column(12, 100%); }
 	.one-third { .column(8, 100%); }
 	.two-third { .column(16, 100%); }
 	.one-quarter { .column(6, 100%); }
-
-	#header,
-	#footer {
-		text-align: center;
-	}
-
-	#subheader ul li,
-	#main {
-		padding: 0 10px;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
  	
 	.debugmessage("media query (768>) fired", blue);
 
