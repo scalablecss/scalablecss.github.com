@@ -214,12 +214,6 @@ body {
 #header, #footer {
   text-align: center;
 }
-#subheader ul li {
-  padding: 0 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 body.debug::before {
   content: "media query (320>) fired";
   font-weight: bold;
