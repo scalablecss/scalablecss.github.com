@@ -1,0 +1,26 @@
+/*
+ * layouts/320up.less
+ * ======================
+ * Layout mixin for mobile devices
+ * ----------------------------------------------------------------- */
+
+ .320up(){
+	
+	body {
+		font-size: 14px;
+		margin: 0;
+	}
+
+	.line { width: 100%; }
+	.line, .lastUnit { overflow:hidden; *overflow:visible; *zoom:1; }
+
+	h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote, .media { margin: 0 10px; }
+
+    .debugmessage("media query (320>) fired", orange);
+
+
+    #header {
+    	height: 10em;
+    }
+        
+}
