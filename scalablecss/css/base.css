@@ -51,11 +51,9 @@ ADD PLUGINS & HELPERS
  * Variables to customize the look and feel
  * ----------------------------------------------------------------- */
 /*
- * pool/mixins/grid.less 
+ * mixins/grid.less 
  * ====================
  * Useful mixins used to define the layout
- *
- * Source: http://semantic.gs
  *
  * ----------------------------------------------------------------- */
 /*-------------------------------------------------------------------*\
@@ -64,6 +62,7 @@ ADD PLUGINS & HELPERS
 /*-------------------------------------------------------------------*\
         Mixin to apply fluid grid
         (standard for all screens, you just have to decide when to apply it)
+        Originally created by https://github.com/stubbornella/oocss
 \*-------------------------------------------------------------------*/
 /*-------------------------------------------------------------------*\
         Debugging functions
@@ -287,6 +286,7 @@ h6, .h6 {
 BODY
 HEADER
 CONTENT
+LISTS
 FOOTER
 MISC
 */
@@ -314,6 +314,19 @@ body {
 #main {
   background: #fcfcfc;
   border-top: 1px solid #dcdcdc;
+}
+/*------------------------------------*\
+	$LISTS
+\*------------------------------------*/
+/* numbered list */
+ol.simple-list li {
+  list-style-type: decimal;
+  margin-left: 40px;
+}
+/* standard list */
+ul.simple-list li {
+  list-style-type: disc;
+  margin-left: 40px;
 }
 /*------------------------------------*\
 	$FOOTER
@@ -381,7 +394,7 @@ body.debug {
   height: 10em;
 }
 /*
- * pool/assets/print.less
+ * assets/print.less
  * ======================
  * Print layout
  * ----------------------------------------------------------------- */
@@ -439,3 +452,104 @@ body.debug {
 	Undependent components that have no relationship
 	with other components
 \*-------------------------------------------------------------------*/
+/*
+ * helpers/vspacing.less
+ * ======================
+ * Helpers for vertical spacings
+ * ----------------------------------------------------------------- */
+.mt5 {
+  margin-top: 5px !important;
+}
+.mt15 {
+  margin-top: 15px !important;
+}
+.mt25 {
+  margin-top: 25px !important;
+}
+.mt30 {
+  margin-top: 30px !important;
+}
+.mt35 {
+  margin-top: 35px !important;
+}
+.mt45 {
+  margin-top: 45px !important;
+}
+.mt60 {
+  margin-top: 60px !important;
+}
+.mt90 {
+  margin-top: 90px !important;
+}
+.mt120 {
+  margin-top: 120px !important;
+}
+.mb5 {
+  margin-bottom: 5px !important;
+}
+.mb15 {
+  margin-bottom: 15px !important;
+}
+.mb25 {
+  margin-bottom: 25px !important;
+}
+.mb30 {
+  margin-bottom: 30px !important;
+}
+.mb35 {
+  margin-bottom: 35px !important;
+}
+.mb45 {
+  margin-bottom: 45px !important;
+}
+.mb60 {
+  margin-bottom: 60px !important;
+}
+.mb90 {
+  margin-bottom: 90px !important;
+}
+.mb120 {
+  margin-bottom: 120px !important;
+}
+.pt15 {
+  padding-top: 15px !important;
+}
+.pt30 {
+  padding-top: 30px !important;
+}
+.pt45 {
+  padding-top: 45px !important;
+}
+.pt60 {
+  padding-top: 60px !important;
+}
+.pt90 {
+  padding-top: 90px !important;
+}
+.pt120 {
+  padding-top: 120px !important;
+}
+.pt130 {
+  padding-top: 130px !important;
+}
+.pb15 {
+  padding-bottom: 15px !important;
+}
+.pb30 {
+  padding-bottom: 30px !important;
+}
+.pb45 {
+  padding-bottom: 45px !important;
+}
+.pb60 {
+  padding-bottom: 60px !important;
+}
+.pb90 {
+  padding-bottom: 90px !important;
+}
+.pb120 {
+  padding-bottom: 120px !important;
+}
+.pb130 {
+  padding-bottom: 130px !important;
+}

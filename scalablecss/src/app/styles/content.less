@@ -20,6 +20,7 @@
 BODY
 HEADER
 CONTENT
+LISTS
 FOOTER
 MISC
 */
@@ -58,6 +59,20 @@ body {
 #main {
 	background: @main-background-color;
 	border-top: 1px solid @main-top-border-color;
+}
+
+/*------------------------------------*\
+	$LISTS
+\*------------------------------------*/
+/* numbered list */
+ol.simple-list li {
+	list-style-type: decimal;
+	margin-left: 40px;
+}
+/* standard list */
+ul.simple-list li {
+	list-style-type: disc;
+	margin-left: 40px;
 }
 
 
