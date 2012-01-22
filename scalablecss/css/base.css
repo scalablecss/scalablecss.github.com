@@ -354,7 +354,7 @@ body {
 .line {
   width: 100%;
 }
-.line, .lastUnit {
+.line, .lastUnit, .container {
   overflow: hidden;
   *overflow: visible;
   *zoom: 1;
