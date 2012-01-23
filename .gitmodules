@@ -1,0 +1,3 @@
+[submodule "scalablecss/src/pool"]
+	path = scalablecss/src/pool
+	url = git://github.com/scalablecss/pool.git
