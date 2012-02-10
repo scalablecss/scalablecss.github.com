@@ -1,0 +1,102 @@
+/*
+ * styles/typography.less
+ * ===========================
+ * Define all typography related stylings here
+ * Everything related to fonts goes here
+ * ----------------------------------------------------------------- */
+
+
+/*------------------------------------*\
+	CONTENTS
+\*------------------------------------*/
+/*
+BODY
+ANCHORS
+HEADINGS
+CUSTOM FONTS
+*/
+
+
+
+
+
+
+/*------------------------------------*\
+	$BODY
+\*------------------------------------*/
+body {
+	font-family: @baseFamily;
+	line-height: @baseLine;
+	color: @baseColor;
+}
+
+/*------------------------------------*\
+	$ANCHORS
+\*------------------------------------*/
+a {
+	color: @linkColor;
+}
+a:hover {
+	color: @linkColorHover;
+}
+
+/*------------------------------------*\
+	$HEADINGS
+\*------------------------------------*/
+h1, .h1 {
+	font-size: 196%;
+	font-weight: normal;
+	font-style: normal;
+	color: #AE0345;
+	font-family: 'ChunkFiveRegular';
+}
+h2, .h2 {
+	font-size: 167%;
+	font-weight: normal;
+	font-style: normal;
+	color: #AE0345;
+	font-family: 'ChunkFiveRegular';
+}
+h3, .h3 {
+	font-size: 146.5%;
+	font-weight: normal;
+	font-style: normal;
+	color: #DF2B72;
+	font-family: 'ChunkFiveRegular';
+}
+h4, .h4 {
+	font-size: 123.1%;
+	font-weight: normal;
+	font-style: normal;
+	color: #333;
+	font-family: 'ChunkFiveRegular';
+}
+h5, .h5 {
+	font-size: 108%;
+	font-weight: bold;
+	font-style: normal;
+	color: #AE0345;
+	font-family: 'ChunkFiveRegular';
+}
+h6, .h6 {
+	font-size: 108%;
+	font-weight: normal;
+	font-style: italic;
+	color: #333;
+	font-family: 'ChunkFiveRegular';
+}
+
+/*------------------------------------*\
+	$BODY
+\*------------------------------------*/
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('fonts/Chunkfive-webfont.eot');
+    src: url('fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Chunkfive-webfont.woff') format('woff'),
+         url('fonts/Chunkfive-webfont.ttf') format('truetype'),
+         url('fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
