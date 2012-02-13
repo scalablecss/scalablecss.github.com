@@ -1,61 +1,840 @@
-footer,header{display:block;}
-html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-html{font-family:sans-serif;}
-body{margin:0;}
-a:focus{outline:thin dotted;}
-a:hover,a:active{outline:0;}
-h1,h2,h3,ul,p{margin:0 10px;}
-ul{margin-left:0;padding:0 0 0 40px;}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#5e5e5e;line-height:1.5em;}
-a{color:#0069d6;}
-a:hover{color:#00438a;}
-h1{font-size:2em;line-height:0.75em;font-weight:normal;font-style:normal;font-family:'ChunkFiveRegular';color:#ffffff;}
-h2{font-size:1.5em;line-height:1.em;font-weight:normal;font-style:normal;font-family:'ChunkFiveRegular';color:#ae0345;}
-h3{font-size:1.17em;line-height:1.282em;font-weight:normal;font-style:normal;font-family:'ChunkFiveRegular';color:#3b4552;}
-@font-face{font-family:'ChunkFiveRegular';src:url('fonts/Chunkfive-webfont.eot');src:url('fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/Chunkfive-webfont.woff') format('woff'),url('fonts/Chunkfive-webfont.ttf') format('truetype'),url('fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');font-weight:normal;font-style:normal;}html{background-color:#17283a;}
-body{background-color:#fcfcfc;}
-#header{border-top:1px solid #54769c;background:#2b5585;background-image:url(data:image/jpeg;base64,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);}
-#subheader{background:#e6e6e6;border-top:1px solid #ffffff;}
-#main{border-top:1px solid #dcdcdc;}
-#footer{background-color:#17283a;}
-::selection{background-color:#ff6500;color:#ffffff;}
-::-moz-selection{background-color:#ff6500;color:#ffffff;}
-body{font-size:14px;margin:.5em 0 0;}
-#pyramids{font-size:8px;width:38em;height:27em;margin:0 auto;}
-.line{width:100%;}
-.line,.lastUnit,.container{overflow:hidden;*overflow:visible;*zoom:1;}
-body.debug::before{content:"media query (320>) fired";font-weight:bold;display:block;text-align:center;background:#ffa500;position:absolute;right:0;left:0;top:0;z-index:99;height:24px;line-height:24px;}
-body.debug{margin-top:24px;}
-@media print{*{background:transparent !important;color:black !important;box-shadow:none !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important;} a,a:visited{text-decoration:underline;} a[href]:after{content:" (" attr(href) ")";} abbr[title]:after{content:" (" attr(title) ")";} .ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:"";} pre,blockquote{border:1px solid #999;page-break-inside:avoid;} thead{display:table-header-group;} tr,img{page-break-inside:avoid;} img{max-width:100% !important;} @page {margin:0.5cm;}p,h2,h3{orphans:3;widows:3;} h2,h3{page-break-after:avoid;}}.mvm{margin-top:1em !important;}
-.mvm{margin-bottom:1em !important;}
-#pyramids{position:relative;overflow:hidden;line-height:1.2em;}
-#pyramids span{position:absolute;color:#d9e3ec;font-weight:bold;text-align:center;text-shadow:1px 1px 1px #4a555e;z-index:10;}
-#pyramids span.base{top:4.5em;left:13em;width:6em;}
-#pyramids span.auxiliary{top:6.5em;left:21.6em;width:6em;}
-#pyramids span.styles{top:11.7em;left:6.7em;line-height:2em;width:8.6em;color:#3D7DA0;text-shadow:1px 1px 1px #cae7f7;}
-#pyramids span.styles:before{content:"";position:absolute;top:0;left:0;z-index:-1;width:6em;border-style:solid;border-width:0 1.35em 2em;border-color:transparent transparent #AFD7ED transparent;}
-#pyramids span.layouts{top:11.7em;left:16.7em;line-height:2em;width:8.6em;color:#8F3901;text-shadow:1px 1px 1px #F88134;}
-#pyramids span.layouts:before{content:"";position:absolute;top:0;left:0;z-index:-1;width:6em;border-style:solid;border-width:0 1.35em 2em;border-color:transparent transparent #FF6500 transparent;}
-#pyramids span.variables{top:19.1em;left:11.7em;line-height:2em;width:8.6em;color:#305D01;text-shadow:1px 1px 1px #91bf34;}
-#pyramids span.variables:before{content:"";position:absolute;top:0;left:0;z-index:-1;width:6em;border-style:solid;border-width:0 1.35em 2em;border-color:transparent transparent #5AAC06 transparent;}
-#pyramids span.mixins{top:19.1em;left:21.7em;line-height:2em;width:8.6em;color:#9C6A0A;text-shadow:1px 1px 1px #f5cb7a;}
-#pyramids span.mixins:before{content:"";position:absolute;top:0;left:0;z-index:-1;width:6em;border-style:solid;border-width:0 1.35em 2em;border-color:transparent transparent #FFB932 transparent;}
-#pyramids span.plugins{top:25em;left:3.5em;width:6em;height:2em;line-height:2em;background:#458ec7;-webkit-border-radius:1em;-moz-border-radius:1em;border-radius:1em;color:#fff;text-shadow:1px 1px #1b4973;}
-#pyramids span.plugins:before{content:"";position:absolute;top:-1em;left:2.6em;width:.6em;height:1em;background-color:#458ec7;}
-#pyramids span.plugins:after{content:"";position:absolute;top:-2.5em;left:1.9em;border-style:solid;border-color:transparent transparent #458ec7 transparent;border-width:1em;}
-#pyramids span.helpers{top:25em;left:23em;width:6em;height:2em;line-height:2em;-webkit-border-radius:1em;-moz-border-radius:1em;border-radius:1em;background:#2d76ae;color:#fff;text-shadow:1px 1px #1b4973;}
-#pyramids span.helpers:before{content:"";position:absolute;top:-1em;left:2.6em;width:.6em;height:1em;background-color:#2d76ae;}
-#pyramids span.helpers:after{content:"";position:absolute;top:-2.5em;left:1.9em;border-style:solid;border-color:transparent transparent #2d76ae transparent;border-width:1em;}
-#pyramids div.base{width:0;border-width:24em 16em;border-color:transparent transparent #016398 transparent;border-style:solid;position:absolute;top:-24em;z-index:1;}
-#pyramids div.auxiliary{width:0;border-width:20.4em 13.6em;border-color:transparent transparent #007abd transparent;border-style:solid;position:absolute;top:-18.3em;left:11em;z-index:2;}
-#pyramids div.styles{width:0;border-width:15em 10em;border-color:transparent transparent #038ede transparent;border-style:solid;position:absolute;top:-7.5em;left:1em;z-index:3;}
-#pyramids div.layouts{width:0;border-width:15em 10em;border-color:transparent transparent #0284cf transparent;border-style:solid;position:absolute;top:-7.5em;left:11em;z-index:4;}
-#pyramids div.variables{width:0;border-width:7.5em 5em;border-color:transparent transparent #3c95d9 transparent;border-style:solid;position:absolute;top:7.5em;left:11em;z-index:5;}
-#pyramids div.mixins{width:0;border-width:7.5em 5em;border-color:transparent transparent #3c95d9 transparent;border-style:solid;position:absolute;top:7.5em;left:21em;z-index:5;}
-#pyramids span.styles:after,#pyramids span.layouts:after,#pyramids span.variables:after,#pyramids span.mixins:after{content:"";position:absolute;z-index:-2;top:1.9em;left:.4em;width:8em;-webkit-box-shadow:0 0 0.5em 1px rgba(0, 0, 0, 0.77);-moz-box-shadow:0 0 0.5em 1px rgba(0, 0, 0, 0.7);-o-box-shadow:0 0 0.5em 1px rgba(0, 0, 0, 0.7);box-shadow:0 0 0.5em 1px rgba(0, 0, 0, 0.7);}
-#pyramids div.base:before{content:"";position:absolute;background:red;top:14.8em;left:-7.6em;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter:alpha(opacity=100);opacity:1;width:16em;height:0;-webkit-box-shadow:0 0 10px 1px black;-moz-box-shadow:0 0 10px 1px black;box-shadow:0 0 10px 1px black;-webkit-transform:rotate(-56deg);-moz-transform:rotate(-56deg);-o-transform:rotate(-56deg);-ms-transform:rotate(-56deg);transform:rotate(-56deg);}
-#pyramids div.base:after{content:"";position:absolute;background:red;top:14em;left:-8.4em;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter:alpha(opacity=100);opacity:1;width:15em;-webkit-box-shadow:0 0 10px 1.5px black;-moz-box-shadow:0 0 10px 1.5px black;box-shadow:0 0 10px 1.5px black;-webkit-transform:rotate(56deg);-moz-transform:rotate(56deg);-o-transform:rotate(56deg);-ms-transform:rotate(56deg);transform:rotate(56deg);}
-#pyramids div.auxiliary:after{content:"";position:absolute;top:13.1em;left:-7.5em;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter:alpha(opacity=100);opacity:1;width:17.2em;height:0;-webkit-box-shadow:0 0 20px 2px black;-moz-box-shadow:0 0 20px 2px black;box-shadow:0 0 20px 2px black;-webkit-transform:rotate(56deg);-moz-transform:rotate(56deg);-o-transform:rotate(56deg);-ms-transform:rotate(56deg);transform:rotate(56deg);}
-#pyramids div.styles:before{content:"";position:absolute;background:red;top:11.5em;left:-1.5em;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter:alpha(opacity=100);opacity:1;width:8.5em;height:0;-webkit-box-shadow:0 0 10px 1px black;-moz-box-shadow:0 0 10px 1px black;box-shadow:0 0 10px 1px black;-webkit-transform:rotate(-56deg);-moz-transform:rotate(-56deg);-o-transform:rotate(-56deg);-ms-transform:rotate(-56deg);transform:rotate(-56deg);}
-#pyramids div.layouts:before{content:"";position:absolute;top:11.5em;left:-6.7em;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter:alpha(opacity=100);opacity:1;width:8em;height:0;-webkit-box-shadow:0 0 10px 1px black;-moz-box-shadow:0 0 10px 1px black;box-shadow:0 0 10px 1px black;-webkit-transform:rotate(56deg);-moz-transform:rotate(56deg);-o-transform:rotate(56deg);-ms-transform:rotate(56deg);transform:rotate(56deg);}
-#pyramids div.layouts:after{content:"";position:absolute;background:red;top:11.5em;left:-1.4em;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter:alpha(opacity=100);opacity:1;width:8em;height:0;-webkit-box-shadow:0 0 10px 1px black;-moz-box-shadow:0 0 10px 1px black;box-shadow:0 0 10px 1px black;-webkit-transform:rotate(-56deg);-moz-transform:rotate(-56deg);-o-transform:rotate(-56deg);-ms-transform:rotate(-56deg);transform:rotate(-56deg);}
+/*
+ * base.less
+ * =========
+ * Base stylesheet
+ * ---------------
+ *
+ *
+ * Feel free to load/unload components in this file
+ *
+ * By default all components are loaded from POOL folder, however
+ * when working on project it is recommended to add/modify files
+ * in APP folder
+ *
+ * ScalablaCSS devs will not normally modify APP folder, only POOL
+ * 
+ * Do NOT load components from inside other components
+ *	  ..by doing so you may lose control over them
+ *
+ * For non-responsive design this file should contain
+ *	  everything you need in most cases
+ *
+ * For responsive design, it's recommended to load layout
+ * 	  that is suited to small-screen devices in this stylesheet
+ *	  and add 2 external stylesheets:
+ *	  	1) Stylesheet that contains various layouts
+ * 				   wrapped in media queries
+ *		3) IE8 and below specific stylesheet that contains
+ *				   one layout
+ *	  for more details read this article:
+ *	  	http://nicolasgallagher.com/mobile-first-css-sass-and-ie/
+ *
+ * ----------------------------------------------------------------- */
+/*------------------------------------*\
+	CONTENTS
+\*------------------------------------*/
+/*
+INITIALIZE
+COMBINE STYLES
+ADD PLUGINS & HELPERS
+*/
+/*-------------------------------------------------------------------*\
+	INITIALIZE
+
+	Declare LESS variables and mixins (LESS Functions)
+	Most of the customization usually is done here
+	This will not be outputted in compiled stylesheet "as is"
+\*-------------------------------------------------------------------*/
+/*
+ * variables/variables.less
+ * ==================
+ * Variables to customize the look and feel
+ * ----------------------------------------------------------------- */
+/*
+ * mixins/grid.less 
+ * ====================
+ * Useful mixins used to define the layout
+ *
+ * ----------------------------------------------------------------- */
+/*-------------------------------------------------------------------*\
+        Clearfix
+\*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*\
+        Mixin to apply fluid grid
+        (standard for all screens, you just have to decide when to apply it)
+        Originally created by https://github.com/stubbornella/oocss
+\*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*\
+        Debugging functions
+\*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*\
+	COMBINE STYLES
+
+	Combine STYLES that are using LESS
+	Variables and Mixins to style the page
+	This will be outputted in compiled stylesheet
+	You can split this part into as many files as you need
+\*-------------------------------------------------------------------*/
+/*
+ * styles/normalize.less
+ * ===========================
+ * Adapted from normalize.css - http://github.com/necolas/normalize.css
+ *
+ * Stripped version - only stuff that we really use
+ *
+ * ----------------------------------------------------------------- */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+footer, header {
+  display: block;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+
+}
+/* 
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+html {
+  font-family: sans-serif;
+}
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+body {
+  margin: 0;
+}
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+a:focus {
+  outline: thin dotted;
+}
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover, a:active {
+  outline: 0;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul {
+  margin-left: 0;
+  padding: 0 0 0 40px;
+}
+/* =============================================================================
+   Spacing
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+p,
+blockquote,
+.media {
+  margin: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img {
+  padding-bottom: 0px;
+}
+pre {
+  margin: 10px;
+}
+table h1,
+table h2,
+table h3,
+table h4,
+table h5,
+table h6,
+table p,
+table ul,
+table ol,
+table dl {
+  padding: 0;
+}
+/*
+ * styles/typography.less
+ * ===========================
+ * Define all typography related stylings here
+ * Everything related to fonts goes here
+ * ----------------------------------------------------------------- */
+/*------------------------------------*\
+	CONTENTS
+\*------------------------------------*/
+/*
+BODY
+ANCHORS
+HEADINGS
+MISC
+CUSTOM FONTS
+*/
+/*------------------------------------*\
+	$BODY
+\*------------------------------------*/
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #5e5e5e;
+  line-height: 1.5em;
+}
+/*------------------------------------*\
+	$ANCHORS
+\*------------------------------------*/
+a {
+  color: #0069d6;
+}
+a:hover {
+  color: #00438a;
+}
+/*------------------------------------*\
+	$HEADINGS
+\*------------------------------------*/
+h1 {
+  font-size: 2em;
+  line-height: 0.75em;
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'ChunkFiveRegular', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+h2 {
+  font-size: 1.5em;
+  line-height: 1.em;
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'ChunkFiveRegular', Helvetica, Arial, sans-serif;
+  color: #ae0345;
+}
+h3 {
+  font-size: 1.17em;
+  line-height: 1.282em;
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'ChunkFiveRegular', Helvetica, Arial, sans-serif;
+  color: #3b4552;
+}
+/*------------------------------------*\
+	$MISC
+\*------------------------------------*/
+#header p {
+  color: #dbdbdb;
+}
+/*------------------------------------*\
+	$CUSTOM FONTS
+\*------------------------------------*/
+@font-face {
+  font-family: 'ChunkFiveRegular';
+  src: url('fonts/Chunkfive-webfont.eot');
+  src: url('fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Chunkfive-webfont.woff') format('woff'), url('fonts/Chunkfive-webfont.ttf') format('truetype'), url('fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+ * styles/content.less
+ * ======================
+ * Elements-specific styling
+ * -------------------------
+ *
+ * This file is your main playground
+ * Do not define layout in this file
+ * Keep layout styling in a separate files (see base.less to find layout files)
+ *
+ * Use as many variables as possible
+ * 
+ * ---------------------------------------------------------------------------- */
+/*------------------------------------*\
+	CONTENTS
+\*------------------------------------*/
+/*
+BODY
+HEADER
+CONTENT
+LISTS
+FOOTER
+MISC
+*/
+/*------------------------------------*\
+	$BODY
+\*------------------------------------*/
+html {
+  background-color: #17283a;
+}
+body {
+  background-color: #fcfcfc;
+}
+/*------------------------------------*\
+	$HEADER
+\*------------------------------------*/
+#header {
+  border-top: 1px solid #54769c;
+  background: #2b5585;
+  background-image: url(data:image/jpeg;base64,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);
+}
+/*------------------------------------*\
+	$CONTENT
+\*------------------------------------*/
+#subheader {
+  background: #e6e6e6;
+  border-top: 1px solid #ffffff;
+}
+#main {
+  border-top: 1px solid #dcdcdc;
+}
+/*------------------------------------*\
+	$LISTS
+\*------------------------------------*/
+/*------------------------------------*\
+	$FOOTER
+\*------------------------------------*/
+#footer {
+  background-color: #17283a;
+}
+/*------------------------------------*\
+	$MISC
+\*------------------------------------*/
+::selection {
+  background-color: #ff6500;
+  color: #ffffff;
+}
+::-moz-selection {
+  background-color: #ff6500;
+  color: #ffffff;
+}
+/*
+ * layouts/320up.less
+ * ======================
+ * Layout mixin for mobile devices
+ * ----------------------------------------------------------------- */
+body {
+  font-size: 14px;
+  margin: .5em 0 0;
+}
+#pyramids {
+  font-size: 8px;
+  width: 38em;
+  height: 27em;
+  margin: 0 auto;
+}
+.line {
+  width: 100%;
+}
+.line, .lastUnit, .container {
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;
+}
+body.debug::before {
+  content: "media query (320>) fired";
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  background: #ffa500;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  height: 24px;
+  line-height: 24px;
+}
+body.debug {
+  margin-top: 24px;
+}
+/*
+ * assets/print.less
+ * ======================
+ * Print layout
+ * ----------------------------------------------------------------- */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  /* Black prints faster: h5bp.com/s */
+  a, a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  /* h5bp.com/t */
+  tr, img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+/*-------------------------------------------------------------------*\
+	ADD PLUGINS & HELPERS
+
+	Undependent components that have no relationship
+	with other components
+\*-------------------------------------------------------------------*/
+/*
+ * helpers/vspacing.less
+ * ======================
+ * p,m = padding,margin
+ * a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
+ * s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
+ *
+ * https://github.com/stubbornella/oocss
+ *
+ * Stripped version - only stuff that we really use
+ *
+ * ----------------------------------------------------------------- */
+.mvm {
+  margin-top: 1em !important;
+}
+.mvm {
+  margin-bottom: 1em !important;
+}
+#pyramids {
+  position: relative;
+  overflow: hidden;
+  line-height: 1.2em;
+}
+/*------------------------------------*\
+	Labels
+\*------------------------------------*/
+/* common label properties */
+#pyramids span {
+  position: absolute;
+  color: #d9e3ec;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 1px #4a555e;
+  z-index: 10;
+  /* make sure all texts z-index is higher than graphic elements */
+
+}
+/* position/style each label individually */
+#pyramids span.base {
+  top: 4.5em;
+  left: 13em;
+  width: 6em;
+}
+#pyramids span.auxiliary {
+  top: 6.5em;
+  left: 21.6em;
+  width: 6em;
+}
+#pyramids span.styles {
+  top: 11.7em;
+  left: 6.7em;
+  line-height: 2em;
+  width: 8.6em;
+  color: #3D7DA0;
+  text-shadow: 1px 1px 1px #cae7f7;
+}
+/* draw a background ribbon */
+#pyramids span.styles:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* make sure we can see the text in front */
+
+  width: 6em;
+  border-style: solid;
+  border-width: 0 1.35em 2em;
+  border-color: transparent transparent #AFD7ED transparent;
+}
+#pyramids span.layouts {
+  top: 11.7em;
+  left: 16.7em;
+  line-height: 2em;
+  width: 8.6em;
+  color: #8F3901;
+  text-shadow: 1px 1px 1px #F88134;
+}
+/* draw a background ribbon */
+#pyramids span.layouts:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* make sure we can see the text in front */
+
+  width: 6em;
+  border-style: solid;
+  border-width: 0 1.35em 2em;
+  border-color: transparent transparent #FF6500 transparent;
+}
+#pyramids span.variables {
+  top: 19.1em;
+  left: 11.7em;
+  line-height: 2em;
+  width: 8.6em;
+  color: #305D01;
+  text-shadow: 1px 1px 1px #91bf34;
+}
+/* draw a background line */
+#pyramids span.variables:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* make sure we can see the text in front */
+
+  width: 6em;
+  border-style: solid;
+  border-width: 0 1.35em 2em;
+  border-color: transparent transparent #5AAC06 transparent;
+}
+#pyramids span.mixins {
+  top: 19.1em;
+  left: 21.7em;
+  line-height: 2em;
+  width: 8.6em;
+  color: #9C6A0A;
+  text-shadow: 1px 1px 1px #f5cb7a;
+}
+/* draw a background line */
+#pyramids span.mixins:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* make sure we can see the text in front */
+
+  width: 6em;
+  border-style: solid;
+  border-width: 0 1.35em 2em;
+  border-color: transparent transparent #FFB932 transparent;
+}
+/* Plugins label */
+#pyramids span.plugins {
+  top: 25em;
+  left: 3.5em;
+  width: 6em;
+  height: 2em;
+  line-height: 2em;
+  background: #458ec7;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  color: #fff;
+  text-shadow: 1px 1px #1b4973;
+}
+#pyramids span.plugins:before {
+  content: "";
+  position: absolute;
+  top: -1em;
+  left: 2.6em;
+  width: .6em;
+  height: 1em;
+  background-color: #458ec7;
+}
+#pyramids span.plugins:after {
+  content: "";
+  position: absolute;
+  top: -2.5em;
+  left: 1.9em;
+  border-style: solid;
+  border-color: transparent transparent #458ec7 transparent;
+  border-width: 1em;
+}
+/* Helpers label */
+#pyramids span.helpers {
+  top: 25em;
+  left: 23em;
+  width: 6em;
+  height: 2em;
+  line-height: 2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  background: #2d76ae;
+  color: #fff;
+  text-shadow: 1px 1px #1b4973;
+}
+#pyramids span.helpers:before {
+  content: "";
+  position: absolute;
+  top: -1em;
+  left: 2.6em;
+  width: .6em;
+  height: 1em;
+  background-color: #2d76ae;
+}
+#pyramids span.helpers:after {
+  content: "";
+  position: absolute;
+  top: -2.5em;
+  left: 1.9em;
+  border-style: solid;
+  border-color: transparent transparent #2d76ae transparent;
+  border-width: 1em;
+}
+/*------------------------------------*\
+	Pyramids
+\*------------------------------------*/
+#pyramids div.base {
+  width: 0;
+  border-width: 24em 16em;
+  border-color: transparent transparent #016398 transparent;
+  border-style: solid;
+  position: absolute;
+  top: -24em;
+  z-index: 1;
+}
+#pyramids div.auxiliary {
+  width: 0;
+  border-width: 20.4em 13.6em;
+  border-color: transparent transparent #007abd transparent;
+  border-style: solid;
+  position: absolute;
+  top: -18.3em;
+  left: 11em;
+  z-index: 2;
+}
+#pyramids div.styles {
+  width: 0;
+  border-width: 15em 10em;
+  border-color: transparent transparent #038ede transparent;
+  border-style: solid;
+  position: absolute;
+  top: -7.5em;
+  left: 1em;
+  z-index: 3;
+}
+#pyramids div.layouts {
+  width: 0;
+  border-width: 15em 10em;
+  border-color: transparent transparent #0284cf transparent;
+  border-style: solid;
+  position: absolute;
+  top: -7.5em;
+  left: 11em;
+  z-index: 4;
+}
+#pyramids div.variables {
+  width: 0;
+  border-width: 7.5em 5em;
+  border-color: transparent transparent #3c95d9 transparent;
+  border-style: solid;
+  position: absolute;
+  top: 7.5em;
+  left: 11em;
+  z-index: 5;
+}
+#pyramids div.mixins {
+  width: 0;
+  border-width: 7.5em 5em;
+  border-color: transparent transparent #3c95d9 transparent;
+  border-style: solid;
+  position: absolute;
+  top: 7.5em;
+  left: 21em;
+  z-index: 5;
+}
+/*------------------------------------*\
+	Shadows
+\*------------------------------------*/
+/* shadow for labels ribbons */
+#pyramids span.styles:after,
+#pyramids span.layouts:after,
+#pyramids span.variables:after,
+#pyramids span.mixins:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 1.9em;
+  left: .4em;
+  width: 8em;
+  -webkit-box-shadow: 0 0 0.5em 1px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 0 0 0.5em 1px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: 0 0 0.5em 1px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 0.5em 1px rgba(0, 0, 0, 0.7);
+}
+/* shadow on .base from .layouts */
+#pyramids div.base:before {
+  content: "";
+  position: absolute;
+  background: red;
+  top: 14.8em;
+  left: -7.6em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  width: 16em;
+  height: 0;
+  -webkit-box-shadow: 0 0 10px 1px black;
+  -moz-box-shadow: 0 0 10px 1px black;
+  box-shadow: 0 0 10px 1px black;
+  -webkit-transform: rotate(-56deg);
+  -moz-transform: rotate(-56deg);
+  -o-transform: rotate(-56deg);
+  -ms-transform: rotate(-56deg);
+  transform: rotate(-56deg);
+}
+/* shadow on .base from .styles */
+#pyramids div.base:after {
+  content: "";
+  position: absolute;
+  background: red;
+  top: 14em;
+  left: -8.4em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  width: 15em;
+  -webkit-box-shadow: 0 0 10px 1.5px black;
+  -moz-box-shadow: 0 0 10px 1.5px black;
+  box-shadow: 0 0 10px 1.5px black;
+  -webkit-transform: rotate(56deg);
+  -moz-transform: rotate(56deg);
+  -o-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  transform: rotate(56deg);
+}
+/* shadow on .auxiliary from .layouts */
+#pyramids div.auxiliary:after {
+  content: "";
+  position: absolute;
+  top: 13.1em;
+  left: -7.5em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  width: 17.2em;
+  height: 0;
+  -webkit-box-shadow: 0 0 20px 2px black;
+  -moz-box-shadow: 0 0 20px 2px black;
+  box-shadow: 0 0 20px 2px black;
+  -webkit-transform: rotate(56deg);
+  -moz-transform: rotate(56deg);
+  -o-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  transform: rotate(56deg);
+}
+/* shadow on .styles from .variables */
+#pyramids div.styles:before {
+  content: "";
+  position: absolute;
+  background: red;
+  top: 11.5em;
+  left: -1.5em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  width: 8.5em;
+  height: 0;
+  -webkit-box-shadow: 0 0 10px 1px black;
+  -moz-box-shadow: 0 0 10px 1px black;
+  box-shadow: 0 0 10px 1px black;
+  -webkit-transform: rotate(-56deg);
+  -moz-transform: rotate(-56deg);
+  -o-transform: rotate(-56deg);
+  -ms-transform: rotate(-56deg);
+  transform: rotate(-56deg);
+}
+/* shadow on .layouts from .variables */
+#pyramids div.layouts:before {
+  content: "";
+  position: absolute;
+  top: 11.5em;
+  left: -6.7em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  width: 8em;
+  height: 0;
+  -webkit-box-shadow: 0 0 10px 1px black;
+  -moz-box-shadow: 0 0 10px 1px black;
+  box-shadow: 0 0 10px 1px black;
+  -webkit-transform: rotate(56deg);
+  -moz-transform: rotate(56deg);
+  -o-transform: rotate(56deg);
+  -ms-transform: rotate(56deg);
+  transform: rotate(56deg);
+}
+/* shadow on .layouts from .mixins */
+#pyramids div.layouts:after {
+  content: "";
+  position: absolute;
+  background: red;
+  top: 11.5em;
+  left: -1.4em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  width: 8em;
+  height: 0;
+  -webkit-box-shadow: 0 0 10px 1px black;
+  -moz-box-shadow: 0 0 10px 1px black;
+  box-shadow: 0 0 10px 1px black;
+  -webkit-transform: rotate(-56deg);
+  -moz-transform: rotate(-56deg);
+  -o-transform: rotate(-56deg);
+  -ms-transform: rotate(-56deg);
+  transform: rotate(-56deg);
+}
